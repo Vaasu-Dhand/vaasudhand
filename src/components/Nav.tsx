@@ -3,7 +3,6 @@ export default function Nav() {
   return (
     <nav>
       {/* 🍔 Menu */}
-       {/* Keep Changing the spinner animation in the CRONJob;s fn  */}
       <button className="hamburger hamburger--spin" type="button">
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>

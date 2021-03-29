@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 export default function Hero() {
   return (
-    <section>
+    <section id="hero">
       <div className="hero-content">
         <h1 style={{ color: 'white' }}>My </h1>
       </div>
