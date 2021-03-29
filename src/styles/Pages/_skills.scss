@@ -1,0 +1,79 @@
+.wrapper-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-template-rows: 100px;
+  grid-gap: 4rem;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  // font-weight: 100;
+
+  li {
+    // letter-spacing: 2px;
+
+    p {
+      margin-top: 10px;
+      font-weight: 100;
+    }
+    i {
+      font-size: 3.5rem; // Write Media Queries for This
+      transition: 0.5s;
+      display: inline-block;
+
+      &:hover {
+        
+        transition: 0.5s;
+        transform: scale(
+          1.1
+        ); // This only works when we apply inline block to (li > i)
+      }
+    }
+    .html:hover {
+      color: #e44c25;
+    }
+    .css:hover {
+      color: #2795d3;
+    }
+    .sass:hover {
+      color: #cf649a;
+    }
+    .bootstrap:hover {
+      color: #9400d3;
+    }
+    .javascript:hover {
+      color: #f7df1c;
+    }
+    .typescript:hover {
+      color: #106ab0;
+    }
+    .react:hover {
+      color: #61dbfb;
+    }
+    .redux:hover {
+      color: #764abc;
+    }
+    .node:hover {
+      color: #00a86b;
+    }
+    .express:hover {
+      color: grey;
+    }
+    .mongodb:hover {
+      color: #4db33d;
+    }
+    .git:hover {
+      color: #e44c25;
+    }
+    .webpack:hover {
+      color: #8ed5fa;
+    }
+    .github:hover {
+      color: #6f42c1;
+    }
+    .vscode:hover {
+      color: #0078d7;
+    }
+  }
+}

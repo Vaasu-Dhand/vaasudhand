@@ -1,0 +1,22 @@
+// * 1 - Helpers
+@import 'Helpers/classes';
+@import 'Helpers/mixins';
+@import 'Helpers/variables';
+
+// * 2 - Libraries
+@import 'Libraries/hamburgers';
+@import 'Libraries/splide';
+
+// * 3 - Global 
+@import 'Global/stars';
+@import 'Global/base';
+
+// * 4 - Pages
+@import 'Pages/blog';
+@import 'Pages/hero';
+@import 'Pages/navbar';
+@import 'Pages/projects';
+@import 'Pages/skills';
+@import 'Pages/footer';
+
+@import 'Global/responsive';

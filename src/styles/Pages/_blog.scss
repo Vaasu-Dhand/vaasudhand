@@ -1,0 +1,91 @@
+// * Ripped Paper Effect
+.paper {
+  position: relative;
+  // Overrides default Splide CSS
+  padding-left: 0;
+  padding-right: 0;
+
+  .splide__track {
+    
+    height: auto;
+    padding: 20px;
+    overflow: visible; // Overrides default Splide CSS
+    background-color: white; // Fallback
+    background: url('../Images/Paper-Background.jpg');
+    animation: box-shadow 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+
+    // * Double Line
+    &::before {
+      position: absolute;
+      z-index: 3;
+      left: 74px;
+      content: '';
+      border-left: 1px solid purple;
+      border-right: 1px solid purple;
+      width: 5px;
+      height: 100%;
+      top: 0;
+    }
+
+    .lines {
+      position: relative;
+      background-image: repeating-linear-gradient(
+        transparent 0px,
+        transparent 23.5px,
+        purple 25px
+      );
+
+      .blog {
+        width: 1000px;
+        line-height: 25px;
+        color: black;
+        h5 {
+          span {
+            margin-right: 5px;
+          }
+        }
+        h4 {
+          text-align: right;
+        }
+      }
+      .more-blogs {
+        color: black;
+        text-align: center;
+        
+        
+        & .blog-link {
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+}
+
+@keyframes box-shadow {
+  0% {
+    box-shadow: rgba(111, 66, 193, 0.6) 0px 5px,
+      rgba(111, 66, 193, 0.5) 0px 10px, rgba(111, 66, 193, 0.4) 0px 15px,
+      rgba(111, 66, 193, 0.3) 0px 20px;
+  }
+  25% {
+    box-shadow: rgba(111, 66, 193, 0.3) 0px 5px,
+      rgba(111, 66, 193, 0.4) 0px 10px, rgba(111, 66, 193, 0.5) 0px 15px,
+      rgba(111, 66, 193, 0.6) 0px 20px;
+  }
+  50% {
+    box-shadow: rgba(111, 66, 193, 0.4) 0px 5px,
+      rgba(111, 66, 193, 0.3) 0px 10px, rgba(111, 66, 193, 0.6) 0px 15px,
+      rgba(111, 66, 193, 0.5) 0px 20px;
+  }
+  75% {
+    box-shadow: rgba(111, 66, 193, 0.5) 0px 5px,
+      rgba(111, 66, 193, 0.6) 0px 10px, rgba(111, 66, 193, 0.3) 0px 15px,
+      rgba(111, 66, 193, 0.4) 0px 20px;
+  }
+  100% {
+    box-shadow: rgba(111, 66, 193, 0.6) 0px 5px,
+      rgba(111, 66, 193, 0.5) 0px 10px, rgba(111, 66, 193, 0.4) 0px 15px,
+      rgba(111, 66, 193, 0.3) 0px 20px;
+  }
+}

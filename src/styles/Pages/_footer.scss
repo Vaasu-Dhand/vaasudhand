@@ -1,0 +1,41 @@
+footer {
+  position: relative;
+  bottom: 0px;
+  overflow: hidden;
+  height: 180px;
+  color: black;
+  background: url('../Images/footerBackgroundNew.jpg') center repeat-x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    position: relative;
+    bottom: -25px;
+    #heart {
+      position: relative;
+      top: 8px;
+      animation: heartbeat 1s infinite;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
