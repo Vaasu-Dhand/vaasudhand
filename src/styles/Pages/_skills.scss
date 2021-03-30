@@ -1,79 +1,96 @@
-.wrapper-icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  grid-template-rows: 100px;
-  grid-gap: 4rem;
-  justify-items: center;
-  align-items: center;
-  list-style: none;
-  text-align: center;
-  text-transform: uppercase;
-  // font-weight: 100;
+#skills {
+  h1 {
+    // # "My Toolkit" -> Add Text Animation
+  }
 
-  li {
+  ul.wrapper-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-rows: 100px;
+    grid-gap: 4rem;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    // font-weight: 100;
+
     // letter-spacing: 2px;
 
-    p {
-      margin-top: 10px;
-      font-weight: 100;
-    }
-    i {
-      font-size: 3.5rem; // Write Media Queries for This
-      transition: 0.5s;
-      display: inline-block;
-
-      &:hover {
-        
+    // p {
+    //   margin-top: 10px;
+    //   font-weight: 100;
+    // }
+    li {
+      img {
+        color: white;
+        background-color: white;
+      }
+      svg {
+        // font-size: 3.5rem; // Write Media Queries for This
         transition: 0.5s;
-        transform: scale(
-          1.1
-        ); // This only works when we apply inline block to (li > i)
+        display: inline-block;
+
+        &:hover {
+          transition: 0.5s;
+          transform: scale(
+            1.1
+          ); // This only works when we apply inline block to (li > i)
+        }
+        path {
+          fill: white;
+        }
+      }
+      p {
+        margin-top: 5px;
       }
     }
-    .html:hover {
-      color: #e44c25;
+    .html5:hover path {
+      // !This Works start here!
+      fill: #e44c25;
     }
-    .css:hover {
-      color: #2795d3;
+    .css3:hover path {
+      fill: #2795d3;
     }
-    .sass:hover {
-      color: #cf649a;
+    .sass:hover path {
+      fill: #cf649a;
     }
-    .bootstrap:hover {
-      color: #9400d3;
+    .bootstrap:hover path {
+      fill: #9400d3;
     }
-    .javascript:hover {
-      color: #f7df1c;
+    .javascript:hover path {
+      fill: #f7df1c;
     }
-    .typescript:hover {
-      color: #106ab0;
+    .typescript_badge:hover path {
+      fill: #106ab0;
     }
-    .react:hover {
-      color: #61dbfb;
+    .react:hover path {
+      fill: #61dbfb;
     }
-    .redux:hover {
-      color: #764abc;
+    .redux:hover path {
+      // Not Present
+      fill: #764abc;
     }
-    .node:hover {
-      color: #00a86b;
+    .nodejs:hover path {
+      fill: #00a86b;
     }
-    .express:hover {
-      color: grey;
+    .express:hover path {
+      fill: grey;
     }
-    .mongodb:hover {
-      color: #4db33d;
+    .mongodb:hover path {
+      fill: #4db33d;
     }
-    .git:hover {
-      color: #e44c25;
+    .git:hover path {
+      fill: #e44c25;
     }
-    .webpack:hover {
-      color: #8ed5fa;
+    .webpack:hover path {
+      fill: #8ed5fa;
     }
-    .github:hover {
-      color: #6f42c1;
+    .github:hover path {
+      fill: #6f42c1;
     }
-    .vscode:hover {
-      color: #0078d7;
+    .visualstudio:hover path {
+      fill: #0078d7;
     }
   }
 }

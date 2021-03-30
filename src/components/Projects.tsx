@@ -46,7 +46,7 @@ export default function Projects() {
       {/* PROJECT 2 */}
       <div className="project">
         <div className="media">
-          <img src="./Images/image.gif" alt="Project 1" />
+          <img src="Images/image.gif" alt="Project 1" />
         </div>
         <div className="project-info">
           <h1 className="">COVID-19 Tracker</h1>
