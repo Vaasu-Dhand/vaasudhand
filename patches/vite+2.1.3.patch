@@ -1,0 +1,26 @@
+diff --git a/node_modules/vite/client.d.ts b/node_modules/vite/client.d.ts
+index ef8e158..ec800d3 100644
+--- a/node_modules/vite/client.d.ts
++++ b/node_modules/vite/client.d.ts
+@@ -125,10 +125,19 @@ declare module '*.gif' {
+   const src: string
+   export default src
+ }
++
++// Fix typescript error for plugin vite-plugin-svgr
+ declare module '*.svg' {
+-  const src: string
+-  export default src
++  import * as React from 'react';
++
++  export const ReactComponent: React.FunctionComponent<
++    React.SVGProps<SVGSVGElement> & { title?: string }
++  >;
++
++  const src: string;
++  export default src;
+ }
++
+ declare module '*.ico' {
+   const src: string
+   export default src
