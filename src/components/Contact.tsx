@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Contact() {
+
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if ( window.location.search.includes('success=true') ) {
+      setSuccess(true);
+    }
+  }, []);
+
   return (
     <section id="contact">
       <h1>Contact</h1>
+      {success && (
+          <p style={{ color: "green" }}>Thanks for your message! </p>
+        )}
       <form name="contact" method="POST" data-netlify="true">
         <p>
           <label>
