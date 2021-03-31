@@ -23,5 +23,5 @@
       "@utils/*": ["utils/*"],
     }
   },
-  "include": ["./src"]
+  "include": ["./src", "./custom.d.ts"]
 }
