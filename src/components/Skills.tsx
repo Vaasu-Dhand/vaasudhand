@@ -21,9 +21,8 @@ import {
   VSCODE,
 } from '../svg/';
 
-
 export default function Skills() {
-  const skills = {
+  const skills = {  // ReArrange Skills
     HTML5,
     CSS3,
     SASS,
@@ -51,7 +50,7 @@ export default function Skills() {
         {map(skills, (Skill, key) =>  (
           <li>
             <Skill key={key} className={key.toLowerCase()} />
-            <h1>{key}</h1>
+            <h3>{key}</h3>
           </li>
         ))}
       </ul>

@@ -13,23 +13,13 @@
     list-style: none;
     text-align: center;
     text-transform: uppercase;
-    // font-weight: 100;
 
-    // letter-spacing: 2px;
-
-    // p {
-    //   margin-top: 10px;
-    //   font-weight: 100;
-    // }
     li {
-      img {
-        color: white;
-        background-color: white;
-      }
       svg {
-        // font-size: 3.5rem; // Write Media Queries for This
+        // font-size: 3.5rem; // Icon Size
         transition: 0.5s;
         display: inline-block;
+        width: 3.5em; // * Size of Logos
 
         &:hover {
           transition: 0.5s;
@@ -41,12 +31,12 @@
           fill: white;
         }
       }
-      p {
+      h3 {
         margin-top: 5px;
+        font-weight: 100;
       }
     }
     .html5:hover path {
-      // !This Works start here!
       fill: #e44c25;
     }
     .css3:hover path {
@@ -61,17 +51,16 @@
     .javascript:hover path {
       fill: #f7df1c;
     }
-    .typescript_badge:hover path {
+    .typescript:hover path {
       fill: #106ab0;
     }
     .react:hover path {
       fill: #61dbfb;
     }
     .redux:hover path {
-      // Not Present
       fill: #764abc;
     }
-    .nodejs:hover path {
+    .node:hover path {
       fill: #00a86b;
     }
     .express:hover path {
@@ -79,6 +68,9 @@
     }
     .mongodb:hover path {
       fill: #4db33d;
+    }
+    .graphql:hover path {
+      fill: #e535ab;
     }
     .git:hover path {
       fill: #e44c25;
@@ -89,8 +81,14 @@
     .github:hover path {
       fill: #6f42c1;
     }
-    .visualstudio:hover path {
+    .vscode:hover path {
       fill: #0078d7;
+    }
+    .amazonaws:hover path {
+      fill: #ff9900;
+    }
+    .elixir:hover path {
+      fill: #6f517a;
     }
   }
 }
