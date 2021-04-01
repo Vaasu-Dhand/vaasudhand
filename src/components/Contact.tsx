@@ -80,6 +80,9 @@ export default function Contact() {
           <button type="submit">Send</button>
         </p>
       </form> */}
+      <form onSubmit={handleSubmit}>
+      {success && 'Thank you, form has been submitted!'}
+        {failure && 'Sorry, Something went wrong!'}
       <div className="background">
         <div className="container">
           <div className="screen">
@@ -99,7 +102,7 @@ export default function Contact() {
               <div className="screen-body-item left">
                 <div className="app-title">
                   <span>CONTACT</span>
-                  <span>US</span>
+                  <span>ME</span>
                 </div>
                 {/* <div className="app-contact">
                   CONTACT INFO : +62 81 314 928 595
@@ -111,11 +114,17 @@ export default function Contact() {
                     <input
                       className="app-form-control"
                       placeholder="NAME"
-                      value="Krisantus Wanandi"
+                      type="text"
+                      name="name"
+                      value={name}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="app-form-group">
-                    <input className="app-form-control" placeholder="EMAIL" />
+                    <input className="app-form-control" placeholder="EMAIL" type="email"
+              name="email"
+              value={email}
+              onChange={handleChange} />
                   </div>
                   <div className="app-form-group">
                     <input
@@ -124,11 +133,11 @@ export default function Contact() {
                     />
                   </div>
                   <div className="app-form-group message">
-                    <input className="app-form-control" placeholder="MESSAGE" />
+                    <textarea className="app-form-control" placeholder="MESSAGE" name="message" value={message} onChange={handleChange} />
                   </div>
                   <div className="app-form-group buttons">
-                    <button className="app-form-button">CANCEL</button>
-                    <button className="app-form-button">SEND</button>
+                    <button className="app-form-button">CLEAR</button>
+                    <button className="app-form-button" type="submit">SEND</button>
                   </div>
                 </div>
               </div>
@@ -136,6 +145,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      </form>
     </section>
   );
 }
