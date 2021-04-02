@@ -119,6 +119,7 @@ export default function Contact() {
                         name="name"
                         value={name}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="app-form-group">
@@ -129,6 +130,7 @@ export default function Contact() {
                         name="email"
                         value={email}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="app-form-group">
@@ -139,6 +141,7 @@ export default function Contact() {
                         name="subject"
                         value={subject}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="app-form-group message">
@@ -148,6 +151,7 @@ export default function Contact() {
                         name="message"
                         value={message}
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="app-form-group buttons">
