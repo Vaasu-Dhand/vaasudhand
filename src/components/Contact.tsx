@@ -46,41 +46,6 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      {/* <form onSubmit={handleSubmit}>
-        {success && 'Thank you, form has been submitted!'}
-        {failure && 'Sorry, Something went wrong!'}
-        <p>
-          <label>
-            Your Name:{' '}
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email:{' '}
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:{' '}
-            <textarea name="message" value={message} onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form> */}
       <form onSubmit={handleSubmit}>
         {success && 'Thank you, form has been submitted!'}
         {failure && 'Sorry, Something went wrong!'}
@@ -141,7 +106,6 @@ export default function Contact() {
                         name="subject"
                         value={subject}
                         onChange={handleChange}
-                        required
                       />
                     </div>
                     <div className="app-form-group message">
@@ -155,8 +119,8 @@ export default function Contact() {
                       />
                     </div>
                     <div className="app-form-group buttons">
-                      <button className="app-form-button">CLEAR</button>
-                      <button className="app-form-button" type="submit">
+                      <button className="app-form-button button-transparent" type="button" onClick={() => setFormState(initialState)}>CLEAR</button>
+                      <button className="app-form-button button-purple" type="submit">
                         SEND
                       </button>
                     </div>

@@ -8,3 +8,26 @@
 .dim {
   opacity: 0.5;
 }
+
+// * BUTTON TYPES
+.button-purple {
+  @include button-styles;
+  background-color: $COLOR_VIOLET;
+  color: #fff;
+}
+
+.button-white {
+  @include button-styles;
+  background-color: #fff;
+  color: black;
+}
+
+.button-transparent {
+  @include button-styles;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $COLOR_WHITE;
+  }
+}

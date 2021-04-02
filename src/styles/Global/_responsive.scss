@@ -1,3 +1,4 @@
+
 /* 
   ##Device = Large Screen Desktops
   ##Screen = 1281px to higher resolution desktops
@@ -17,25 +18,25 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* CSS */
-
+  
   .container {
     max-width: 1024px;
   }
 
   .project {
     flex-direction: row;
-
     .media {
       width: 50%;
     }
-
     .project-info {
       width: 50%;
-      // line-height: 1;
-      
     }
   }
+
+  
+  
 }
+
 
 /* 
   ##Device = Tablets, Ipads (portrait)
@@ -44,10 +45,17 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   /* CSS */
+
   .container {
     max-width: 767px;
   }
   
+  // * Change Button Width
+  .buttons {
+    button {
+      width: 130px;
+    }
+  }
 
 }
 
@@ -61,7 +69,12 @@
   .container {
     max-width: 767px;
   }
-  
+  // * Change Button Width
+    .buttons {
+      button {
+        width: 130px;
+      }
+    }
 
 
 }
@@ -71,13 +84,13 @@
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 768px) {
   /* CSS */
+
   .container {
     max-width: 480px;
   }
 
- 
 }
 
 /* 
@@ -86,10 +99,11 @@
 */
 
 @media (min-width: 120px) and (max-width: 480px) {
+
   // /* CSS */
-  .container {
+  // .container {
     // max-width: 119px;
-  }
+  // }
 }
 
 // * Changes FlexBox Layout on Smaller Devices

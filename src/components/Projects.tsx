@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Projects() {
   return (
@@ -33,13 +33,17 @@ export default function Projects() {
             <a
               href="https://investing-project-vd.herokuapp.com/"
               target="_blank"
-              >LIVE</a
+              className="button-white"
             >
+              LIVE
+            </a>
             <a
               href="https://github.com/Vaasu-Dhand/investing-project"
               target="_blank"
-              >GITHUB</a
+              className="button-white"
             >
+              GITHUB
+            </a>
           </div>
         </div>
       </div>
@@ -71,20 +75,24 @@ export default function Projects() {
             <a
               href="https://investing-project-vd.herokuapp.com/"
               target="_blank"
-              >LIVE</a
+              className="button-white"
             >
+              LIVE
+            </a>
             <a
               href="https://github.com/Vaasu-Dhand/investing-project"
               target="_blank"
-              >GITHUB</a
+              className="button-white"
             >
+              GITHUB
+            </a>
           </div>
         </div>
       </div>
       {/* PROJECT 3  */}
       <div className="project">
         <div className="media">
-          <img src="./Images/image.gif" alt="Project 1" /> 
+          <img src="./Images/image.gif" alt="Project 1" />
         </div>
         <div className="project-info">
           <h1 className="">Pokemon Cards</h1>
@@ -101,17 +109,23 @@ export default function Projects() {
             </p>
           </div>
           <div className="link-container">
-            <a href="https://pokemon-project-vd.herokuapp.com/" target="_blank"
-              >LIVE</a
+            <a
+              href="https://pokemon-project-vd.herokuapp.com/"
+              target="_blank"
+              className="button-white"
             >
+              LIVE
+            </a>
             <a
               href="https://github.com/Vaasu-Dhand/pokemon-project"
               target="_blank"
-              >GITHUB</a
+              className="button-white"
             >
+              GITHUB
+            </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

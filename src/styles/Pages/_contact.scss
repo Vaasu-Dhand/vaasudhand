@@ -130,23 +130,14 @@
     resize: vertical;
   }
   .app-form-button {
-    background: none;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    color: $COLOR_PURPLE;
     &:nth-of-type(1) {
       float: left;
     }
     &:nth-of-type(2) {
-      // background-color: $COLOR_PURPLE;
-    }
-    &:hover {
-      color: #b9134f;
+      float: right;
     }
   }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 768px) {
     .screen-body {
       flex-direction: column;
     }
@@ -163,7 +154,7 @@
       }
     }
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     .screen-body {
       padding: 40px;
     }
