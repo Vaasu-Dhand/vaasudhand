@@ -8,5 +8,7 @@
 ## Forms
 - Netlify Forms (Form Submissions)
 - Zapier (Contact Form Emails)
+## Database
+- JSONBIN.io
 ## Deployment
 - [Netlify](https://vaasudhand.netlify.app/)

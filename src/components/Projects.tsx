@@ -1,24 +1,45 @@
 import React, { useState, useEffect } from 'react';
+import useLocalStorage from '../hooks/useLocalStorage'
+import { isArrayLike } from 'lodash'
 
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>();
+  // const [projects, setProjects] = useState<Project[]>();
 
+  // const initialState = [{
+  //   name: '',
+  //   tags: [],
+  //   links: {
+  //     live: '',
+  //     github: '',
+  //   },
+  //   description: '',
+  // }]
+
+  const [projects, setProjects] = useLocalStorage('projects', null);
+  
   useEffect(() => {
-    // * Fetch Project Data
-    fetch(`${import.meta.env.VITE_PROJECTS_DATA_URL}`)
+    console.log("Inside UseEffect");
+    
+    // * Fetch Project Data only if not in Local Storage
+    if (!isArrayLike(projects)) {
+      console.log("Asked JSONBIN for data");
+       
+      // * I am using a short hack here, instead of checking if the value actually exists in LS, I am just comparing if its Array Like(which means its been fetched once and should be in LS)
+      fetch(`${import.meta.env.VITE_PROJECTS_DATA_URL}`)
       .then((res) => res.json())
       .then((data) => {
         setProjects(data.projects);
       })
       .catch((error) => console.error(error));
-  }, []);
+    }
+  }, [projects]);
 
   return (
     <section id="projects" className="container">
       <h1>PROJECTS</h1>
 
       {projects &&
-        projects.map(({ name, tags, links: { live, github }, description }) => (
+        projects.map(({ name, tags, links: { live, github }, description }: Project) => (
           <div className="project" key={name}>
             <div className="media">
               <img src="./Images/image.gif" alt={name + ' - Project'} />
@@ -49,11 +70,11 @@ export default function Projects() {
 }
 
 interface Project {
-  name: string;
-  tags: string[];
+  name: string,
+  tags: string[],
   links: {
-    live: string;
-    github: string;
-  };
-  description: string;
+    live: string,
+    github: string,
+  },
+  description: string,
 }
