@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion'
 import { useViewport, Viewport as deviceTypes } from '../hooks/useViewport';
 import { map, size } from 'lodash';
 import {
@@ -89,10 +90,10 @@ export default function Skills() {
       <h1>My Toolkit</h1>
       <ul className="wrapper-skills">
         {map(skillsToBeDisplayed, (Skill: React.ElementType, key) => (
-          <li key={key}>
+          <motion.li key={key} animate={{ opacity: 0.8 }} initial={{ opacity: 0 }} transition={{ duration: 2.5, when: "beforeChildren" }} >
             <Skill className={key.toLowerCase()} />
             <h3>{key}</h3>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </section>
