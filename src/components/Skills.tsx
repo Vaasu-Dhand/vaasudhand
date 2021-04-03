@@ -90,7 +90,7 @@ export default function Skills() {
       <h1>My Toolkit</h1>
       <ul className="wrapper-skills">
         {map(skillsToBeDisplayed, (Skill: React.ElementType, key) => (
-          <motion.li key={key} animate={{ opacity: 0.8 }} initial={{ opacity: 0 }} transition={{ duration: 2.5, when: "beforeChildren" }} >
+          <motion.li key={key} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 2.5, when: "beforeChildren" }} >
             <Skill className={key.toLowerCase()} />
             <h3>{key}</h3>
           </motion.li>
