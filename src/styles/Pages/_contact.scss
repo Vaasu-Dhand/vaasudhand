@@ -69,11 +69,12 @@
   .screen-body-item {
     flex: 1;
     padding: 50px;
-    flex-grow: 3;
+    flex-grow: 2;
     &.left {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      justify-content: space-between;
     }
   }
 
@@ -82,7 +83,7 @@
     flex-direction: column;
     position: relative;
     color: $COLOR_PURPLE;
-    font-size: 26px;
+    font-size: 2rem;
     &:after {
       content: '';
       display: block;
@@ -94,10 +95,26 @@
       background: $COLOR_PURPLE;
     }
   }
-  .app-contact {
-    margin-top: auto;
-    font-size: 8px;
-    color: #888;
+  .contact {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 2.5rem;
+    align-self: flex-start;
+    color: #e0e0e0;
+    a.email {
+      color: $COLOR_PURPLE;
+      text-decoration: none;
+      font-weight: 300;
+      position: relative;
+      border-bottom: 1px solid transparent;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 1px solid $COLOR_PURPLE;
+      }
+    }
   }
   .app-form-group {
     margin-bottom: 15px;
@@ -145,10 +162,15 @@
     .screen-body {
       flex-direction: column;
     }
-    .screen-body-item.left {
-      margin-bottom: 30px;
+    // .screen-body-item.left {
+    // }
+    .contact {
+      line-height: 2rem;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
     }
     .app-title {
+      margin-bottom: 30px;
       flex-direction: row;
       span {
         margin-right: 12px;

@@ -70,9 +70,13 @@ export default function Contact() {
                     <span>CONTACT</span>
                     <span>ME</span>
                   </div>
-                  {/* <div className="app-contact">
-                  CONTACT INFO : +62 81 314 928 595
-                </div> */}
+                  <div className="contact">
+                    <p>Wanna work together? </p>
+                    <p>Send me an email at </p>
+                    <a href="mailto:dhandvaasu@gmail.com" className="email">
+                      dhandvaasu@gmail.com
+                    </a>
+                  </div>
                 </div>
                 <div className="screen-body-item">
                   <div className="app-form">
@@ -119,8 +123,17 @@ export default function Contact() {
                       />
                     </div>
                     <div className="app-form-group buttons">
-                      <button className="app-form-button button-transparent" type="button" onClick={() => setFormState(initialState)}>CLEAR</button>
-                      <button className="app-form-button button-purple" type="submit">
+                      <button
+                        className="app-form-button button-transparent"
+                        type="button"
+                        onClick={() => setFormState(initialState)}
+                      >
+                        CLEAR
+                      </button>
+                      <button
+                        className="app-form-button button-purple"
+                        type="submit"
+                      >
                         SEND
                       </button>
                     </div>
