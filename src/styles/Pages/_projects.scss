@@ -33,7 +33,23 @@
     h1 {
       text-transform: uppercase;
       font-size: 1.8rem;
+    }
 
+    h5 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      justify-content: center;
+
+      span.tag {
+        background-color: $COLOR_VIOLET;
+        color: $COLOR_WHITE;
+        padding: .25em 1em;  
+        line-height: 1.3;
+        border-radius: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
     }
 
     p {
@@ -44,17 +60,50 @@
     }
     .link-container {
       display: inline-block;
+      
+      a {
+        // padding: .4rem .6rem;
+        // background-color: $COLOR_WHITE;
+        // border-radius: .5rem;
+        // transition: .3s;
+        // border: none;
+
+        // NEW CODE
+        display: inline-block;
+        width: 140px;
+        line-height: 45px;
+        height: 45px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+
+        &:hover {
+          background-color: $COLOR_VIOLET;
+          color: $COLOR_WHITE;
+          // NEW CODE
+          transform: translateY(-5px);
+          box-shadow: 0px 15px 20px rgba(111, 66, 193, 0.4);
+
+         
+          // transition: .3s;
+        }
+        
+       
+        }
+      
     }
   }
 }
 
-.tag {
-  background-color: $COLOR_VIOLET;
-  color: $COLOR_WHITE;
-  padding: .25em 1em;  
-  line-height: 2;
-  border-radius: 1rem;
-  font-weight: 500;
-  
-  text-transform: uppercase;
-}

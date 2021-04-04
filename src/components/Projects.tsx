@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage'
 import { isArrayLike } from 'lodash'
 
@@ -22,7 +22,7 @@ export default function Projects() {
   return (
     <section id="projects" className="container">
       <h1>PROJECTS</h1>
-
+      
       {projects &&
         projects.map(({ name, tags, links: { live, github }, description }: Project) => (
           <div className="project" key={name}>
