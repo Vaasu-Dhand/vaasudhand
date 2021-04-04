@@ -3,27 +3,12 @@ import useLocalStorage from '../hooks/useLocalStorage'
 import { isArrayLike } from 'lodash'
 
 export default function Projects() {
-  // const [projects, setProjects] = useState<Project[]>();
-
-  // const initialState = [{
-  //   name: '',
-  //   tags: [],
-  //   links: {
-  //     live: '',
-  //     github: '',
-  //   },
-  //   description: '',
-  // }]
 
   const [projects, setProjects] = useLocalStorage('projects', null);
-  
+
   useEffect(() => {
-    console.log("Inside UseEffect");
-    
     // * Fetch Project Data only if not in Local Storage
     if (!isArrayLike(projects)) {
-      console.log("Asked JSONBIN for data");
-       
       // * I am using a short hack here, instead of checking if the value actually exists in LS, I am just comparing if its Array Like(which means its been fetched once and should be in LS)
       fetch(`${import.meta.env.VITE_PROJECTS_DATA_URL}`)
       .then((res) => res.json())
