@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { useViewport, Viewport as deviceTypes } from '../hooks/useViewport';
+import { useInViewAnimate } from '../hooks/useInViewAnimate'
 import { map, size } from 'lodash';
 import {
   HTML5,
@@ -45,13 +46,33 @@ export default function Skills() {
     AMAZONAWS,
     ELIXIR,
   };
+  
+  // * Framer Animation
+  const container = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 1,
+      },
+    },
+  };
 
+  const listItem = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+  };
   // Hooks
+  
+  const { inViewRef, animation } = useInViewAnimate(container)
+  
   const deviceType = useViewport(); // * Returns the DeviceType Depending on the Width of Viewport
 
-  const [skillsToBeDisplayed, setSkillsToBeDisplayed] = useState({})
+  const [skillsToBeDisplayed, setSkillsToBeDisplayed] = useState({});
 
   useEffect(() => {
+    console.log('I ran');
+
     // console.log("Screen Size Changed!", {deviceType});
     let numOfSkillsRemoved;
     switch (deviceType) {
@@ -77,25 +98,33 @@ export default function Skills() {
         console.warn('Weird! Screen Size Switch in Default');
         numOfSkillsRemoved = 0;
         break;
-    }
-    
-    // * Slice Skills Depending on Screen Size and Store it in State
-    const slicedSkills = Object.fromEntries(Object.entries(skills).slice(0, size(skills) - numOfSkillsRemoved));
-    setSkillsToBeDisplayed(slicedSkills)
-    
+      }
+      
+      // * Slice Skills Depending on Screen Size and Store it in State
+      const slicedSkills = Object.fromEntries(
+      Object.entries(skills).slice(0, size(skills) - numOfSkillsRemoved)
+    );
+    setSkillsToBeDisplayed(slicedSkills);
   }, [useViewport()]);
+
 
   return (
     <section id="skills" className="container">
       <h1>My Toolkit</h1>
-      <ul className="wrapper-skills">
-        {map(skillsToBeDisplayed, (Skill: React.ElementType, key) => (
-          <motion.li key={key} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 2.5, when: "beforeChildren" }} >
-            <Skill className={key.toLowerCase()} />
-            <h3>{key}</h3>
-          </motion.li>
+      <motion.ul
+        className="wrapper-skills"
+        variants={container}
+        ref={inViewRef}  
+        animate="animate"
+        initial="initial"
+      >
+        {map(skills, (Skill: React.ElementType, key) => (
+            <motion.li key={key} variants={listItem}>
+              <Skill className={key.toLowerCase()} />
+              <h3>{key}</h3>
+            </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </section>
   );
 }
