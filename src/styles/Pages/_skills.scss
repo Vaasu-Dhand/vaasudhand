@@ -37,58 +37,59 @@
         text-shadow: 2px 3px 7px rgba(255, 255, 255, 0.9);
       }
     }
-    .html5:hover path {
+    // ? Remove the second hover selector if you want to keep the skills colored
+    .html5 path, .html5:hover path {
       fill: #e44c25;
     }
-    .css3:hover path {
+    .css3 path, .css3:hover path {
       fill: #2795d3;
     }
-    .sass:hover path {
+    .sass path, .sass:hover path {
       fill: #cf649a;
     }
-    .bootstrap:hover path {
+    .bootstrap path, .bootstrap:hover path {
       fill: #9400d3;
     }
-    .javascript:hover path {
+    .javascript path, .javascript:hover path {
       fill: #f7df1c;
     }
-    .typescript:hover path {
+    .typescript path, .typescript:hover path {
       fill: #106ab0;
     }
-    .react:hover path {
+    .react path, .react:hover path {
       fill: #61dbfb;
     }
-    .redux:hover path {
+    .redux path, .redux:hover path {
       fill: #764abc;
     }
-    .node:hover path {
+    .node path, .node:hover path {
       fill: #00a86b;
     }
-    .express:hover path {
+    .express path, .express:hover path {
       fill: grey;
     }
-    .mongodb:hover path {
+    .mongodb path, .mongodb:hover path {
       fill: #4db33d;
     }
-    .graphql:hover path {
+    .graphql path, .graphql:hover path {
       fill: #e535ab;
     }
-    .git:hover path {
+    .git path, .git:hover path {
       fill: #e44c25;
     }
-    .webpack:hover path {
+    .webpack path, .webpack:hover path {
       fill: #8ed5fa;
     }
-    .github:hover path {
+    .github path, .github:hover path {
       fill: #6f42c1;
     }
-    .vscode:hover path {
+    .vscode path, .vscode:hover path {
       fill: #0078d7;
     }
-    .amazonaws:hover path {
+    .amazonaws path, .amazonaws:hover path {
       fill: #ff9900;
     }
-    .elixir:hover path {
+    .elixir path, .elixir:hover path {
       fill: #6f517a;
     }
   }

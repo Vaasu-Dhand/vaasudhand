@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
 import { useViewport, Viewport as deviceTypes } from '../hooks/useViewport';
-import { useInViewAnimate } from '../hooks/useInViewAnimate'
 import { map, size } from 'lodash';
 import {
   HTML5,
@@ -47,32 +47,15 @@ export default function Skills() {
     ELIXIR,
   };
   
-  // * Framer Animation
-  const container = {
-    initial: { opacity: 0 },
-    animate: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 1,
-      },
-    },
-  };
-
-  const listItem = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-  };
-  // Hooks
+  // * Hooks
+  const animation = useAnimation();    
+  const [ref, inView, entry] = useInView({ threshold: 0, triggerOnce: true });
   
-  const { inViewRef, animation } = useInViewAnimate(container)
-  
+  const [skillsToBeDisplayed, setSkillsToBeDisplayed] = useState({});
   const deviceType = useViewport(); // * Returns the DeviceType Depending on the Width of Viewport
 
-  const [skillsToBeDisplayed, setSkillsToBeDisplayed] = useState({});
-
+  // * Removes and Adds Skills based on ViewPort Width
   useEffect(() => {
-    console.log('I ran');
-
     // console.log("Screen Size Changed!", {deviceType});
     let numOfSkillsRemoved;
     switch (deviceType) {
@@ -107,20 +90,44 @@ export default function Skills() {
     setSkillsToBeDisplayed(slicedSkills);
   }, [useViewport()]);
 
+  // * Starts Animation in the right ViewPort
+  useEffect(() => {
+    if (inView) {
+      animation.start("animate");
+    } else {
+      animation.start("initial");
+    }
+  }, [animation, inView]);
 
+  // * Framer Animation
+  const containerVariant = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+      
+    },
+  };
+  const skillVariant = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+  };
+  
   return (
     <section id="skills" className="container">
       <h1>My Toolkit</h1>
       <motion.ul
         className="wrapper-skills"
-        variants={container}
-        ref={inViewRef}  
-        animate="animate"
+        variants={containerVariant}
+        animate={animation}
+        ref={ref}
         initial="initial"
       >
-        {map(skills, (Skill: React.ElementType, key) => (
-            <motion.li key={key} variants={listItem}>
-              <Skill className={key.toLowerCase()} />
+        {map(skillsToBeDisplayed, (Skill: React.ElementType, key) => (
+            <motion.li key={key} variants={skillVariant}>
+              <Skill className={`${key.toLowerCase()}`} />
               <h3>{key}</h3>
             </motion.li>
         ))}
