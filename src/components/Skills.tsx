@@ -49,7 +49,7 @@ export default function Skills() {
   
   // * Hooks
   const animation = useAnimation();    
-  const [ref, inView, entry] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [ref, inView, entry] = useInView({ threshold: 0, triggerOnce: true });
   
   const [skillsToBeDisplayed, setSkillsToBeDisplayed] = useState({});
   const deviceType = useViewport(); // * Returns the DeviceType Depending on the Width of Viewport
@@ -90,7 +90,7 @@ export default function Skills() {
     setSkillsToBeDisplayed(slicedSkills);
   }, [useViewport()]);
 
-  // * Starts Animation in the right viewPort
+  // * Starts Animation in the right ViewPort
   useEffect(() => {
     if (inView) {
       animation.start("animate");
@@ -105,8 +105,9 @@ export default function Skills() {
     animate: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
+      
     },
   };
   const skillVariant = {
@@ -126,7 +127,7 @@ export default function Skills() {
       >
         {map(skillsToBeDisplayed, (Skill: React.ElementType, key) => (
             <motion.li key={key} variants={skillVariant}>
-              <Skill className={key.toLowerCase()} />
+              <Skill className={`${key.toLowerCase()}`} />
               <h3>{key}</h3>
             </motion.li>
         ))}
