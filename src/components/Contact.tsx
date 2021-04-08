@@ -1,16 +1,14 @@
-import React, { ChangeEventHandler, FormEventHandler, useState } from 'react';
+import React, {
+  ChangeEventHandler,
+  FormEventHandler,
+  useState,
+  useEffect,
+} from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Contact() {
-  const encode = (data: any) => {
-    // ? I've set any type explicilty
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&');
-  };
-
-  // Hooks
+  // * Hooks
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -20,10 +18,27 @@ export default function Contact() {
   const [failure, setFailure] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const animation = useAnimation();
+  const [ref, inView, entry] = useInView({ threshold: 0.3, triggerOnce: true });
+
+  // * Starts Animation in the right ViewPort
+  useEffect(() => {
+    inView && animation.start('animate');
+  }, [animation, inView]);
+
+  // * Variables
+  const encode = (data: any) => {
+    // ? I've set any type explicilty
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
   const initialState = { name: '', email: '', subject: '', message: '' };
   const { name, email, subject, message } = formState;
 
-  // Event Handlers
+  // * Event Handlers
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     try {
       e.preventDefault();
@@ -44,9 +59,45 @@ export default function Contact() {
     HTMLInputElement | HTMLTextAreaElement
   > = (e) => setFormState({ ...formState, [e.target.name]: e.target.value });
 
+  // * Framer Animation
+  const screenVariant = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+        when: 'beforeChildren',
+      },
+    },
+  };
+  const leftVariant = {
+    initial: { x: -500 },
+    animate: {
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+  const rightVariant = {
+    initial: { y: 600 },
+    animate: {
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   return (
     <section id="contact">
-      <form onSubmit={handleSubmit}>
+      <motion.form
+        onSubmit={handleSubmit}
+        ref={ref}
+        variants={screenVariant}
+        animate={animation}
+        initial="initial"
+      >
         {success && 'Thank you, form has been submitted!'}
         {failure && 'Sorry, Something went wrong!'}
         <div className="background">
@@ -65,7 +116,10 @@ export default function Contact() {
                 </div>
               </div>
               <div className="screen-body">
-                <div className="screen-body-item left">
+                <motion.div
+                  className="screen-body-item left"
+                  variants={leftVariant}
+                >
                   <div className="app-title">
                     <span>CONTACT</span>
                     <span>ME</span>
@@ -73,15 +127,15 @@ export default function Contact() {
                   <div className="contact">
                     <p>Wanna work together? </p>
                     <p>Send me an email at </p>
-                    <a
-                      href="mailto:dhandvaasu@gmail.com"
-                      className="email"
-                    >
+                    <a href="mailto:dhandvaasu@gmail.com" className="email">
                       dhandvaasu@gmail.com
                     </a>
                   </div>
-                </div>
-                <div className="screen-body-item">
+                </motion.div>
+                <motion.div
+                  className="screen-body-item"
+                  variants={rightVariant}
+                >
                   <div className="app-form">
                     <div className="app-form-group">
                       <input
@@ -141,12 +195,12 @@ export default function Contact() {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
         </div>
-      </form>
+      </motion.form>
     </section>
   );
 }

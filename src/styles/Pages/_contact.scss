@@ -1,4 +1,6 @@
 #contact {
+  overflow-y: hidden; // * Fixes Framer Animation
+
   .background {
     display: flex;
     min-height: 100vh;
