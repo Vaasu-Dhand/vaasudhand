@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-
 export default function Hero() {
+  // * Hooks
   const [opacity, setOpacity] = useState(1)
 
+  // * Set's Section Opacity on Scroll
   useEffect(() => {
     window.onscroll = () => {
       setOpacity(1 - window.scrollY / 800)

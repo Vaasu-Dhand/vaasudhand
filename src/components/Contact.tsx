@@ -65,24 +65,26 @@ export default function Contact() {
     animate: {
       opacity: 1,
       transition: {
-        duration: 2,
+        duration: 1.5,
         when: 'beforeChildren',
       },
     },
   };
   const leftVariant = {
-    initial: { x: -500 },
+    initial: { x: -500, opacity: 0 },
     animate: {
       x: 0,
+      opacity: 1,
       transition: {
         duration: 1,
       },
     },
   };
   const rightVariant = {
-    initial: { y: 600 },
+    initial: { y: 600, opacity: 0 },
     animate: {
       y: 0,
+      opacity: 1,
       transition: {
         duration: 1,
       },
