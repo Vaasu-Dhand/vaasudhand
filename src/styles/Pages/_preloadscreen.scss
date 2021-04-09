@@ -1,0 +1,71 @@
+// * Loading Text
+.preloader-1, .preloader-2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader-1 div, .preloader-2 div {
+  color: #fff;
+  margin: 5px 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.preloader-1 .line {
+  width: 1px;
+  height: 22px;
+  background: #fff;
+  margin: 0 6px;
+  display: inline-block;
+  animation: opacity-1 1000ms infinite ease-in-out;
+}
+
+.preloader-2 .line {
+  width: 5px;
+  height: 12px;
+  background: #fff;
+  margin: 0 3.5px;
+  display: inline-block;
+  animation: opacity-2 1000ms infinite ease-in-out;
+}
+
+$delays: 800ms, 600ms, 400ms, 200ms, 0ms, 200ms, 400ms, 600ms, 800ms;
+@for $i from 1 through 9 {
+  .preloader-1 .line-#{$i}, .preloader-2 .line-#{$i} {
+    animation-delay: nth($delays, $i);
+  }
+}
+
+@keyframes opacity-1 { 
+  0% { 
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }  
+}
+
+@keyframes opacity-2 { 
+  0% { 
+    opacity: 1;
+    height: 15px;
+  }
+  50% { 
+    opacity: 0;
+    height: 12px;
+  }
+  100% { 
+    opacity: 1;
+    height: 15px;
+  }  
+}
+// * Star background
