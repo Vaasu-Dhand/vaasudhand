@@ -12,18 +12,18 @@ import {
 import { ViewportProvider } from './hooks/useViewport';
 
 function App() {
+  const duration: number = 4000;
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, duration);
   }, []);
 
   return (
     // loading ? (
-    <PreLoadScreen />
+    <PreLoadScreen duration={duration} />
   // ) : (
   //   <div className="App">
   //     <div className="stars">
