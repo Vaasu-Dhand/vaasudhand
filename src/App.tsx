@@ -1,4 +1,4 @@
-import React, { ReactPropTypes } from 'react';
+import React, { useState } from 'react';
 import {
   Nav,
   Hero,
@@ -8,17 +8,30 @@ import {
   Footer,
   Background,
 } from './components';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ViewportProvider } from './hooks/useViewport';
-import usePreLoadScreen from './hooks/usePreLoadScreen'
+import usePreLoadScreen from './hooks/usePreLoadScreen';
 
 function App() {
-
   // * PreLoadScreen Hook
-  const {loading, PreLoadScreenComponent} = usePreLoadScreen();
+  const { loading, PreLoadScreenComponent } = usePreLoadScreen(4000);
+  const [show, setShow] = useState(true)
 
-  return (
-    loading ? (
-    <PreLoadScreenComponent duration={4000} />
+  setTimeout(() => {
+    setShow(false)
+  }, 3300);
+
+  return loading ? (
+    <AnimatePresence>
+      {show && (<motion.div
+        key="preload-screen"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <PreLoadScreenComponent />
+      </motion.div>)}
+    </AnimatePresence>
   ) : (
     <div className="App">
       <div className="stars">
@@ -35,7 +48,6 @@ function App() {
         </div>
       </div>
     </div>
-    )
   );
 }
 

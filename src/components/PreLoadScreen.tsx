@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { times } from 'lodash';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useCountUp } from 'use-count-up';
 
 export default function PreLoadScreen({ duration }: PropTypes) {
@@ -12,12 +11,8 @@ export default function PreLoadScreen({ duration }: PropTypes) {
   });
 
   return (
-    <AnimatePresence>
-      <motion.section
+        <section
         id="preload-screen"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
       >
         {/* Stars BG */}
         <canvas id="field"></canvas>
@@ -34,8 +29,8 @@ export default function PreLoadScreen({ duration }: PropTypes) {
             ))}
           </div>
         </div>
-      </motion.section>
-    </AnimatePresence>
+      </section>
+
   );
 }
 
