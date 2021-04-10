@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactPropTypes } from 'react';
 import {
   Nav,
   Hero,
