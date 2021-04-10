@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { PreLoadScreen } from '../components/'
 
 export default function usePreLoadScreen(duration: number) {
 
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 4000); 
+    }, duration); 
+  }, [])
 
-  console.log(loading, duration);
-  
   const PreLoadScreenComponent: React.FC = () => {
     return (<PreLoadScreen duration={duration} />);
   };
