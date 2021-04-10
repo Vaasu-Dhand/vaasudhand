@@ -10,7 +10,7 @@ import {
 } from './components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ViewportProvider } from './hooks/useViewport';
-import usePreLoadScreen from './hooks/usePreLoadScreen';
+import { usePreLoadScreen } from './hooks';
 
 function App() {
   // * PreLoadScreen Hook

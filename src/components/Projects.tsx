@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useLocalStorage from '../hooks/useLocalStorage'
+import { useLocalStorage } from '../hooks'
 import { isArrayLike } from 'lodash'
 
 export default function Projects() {
