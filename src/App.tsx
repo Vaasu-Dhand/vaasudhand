@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Nav,
   Hero,
@@ -7,40 +7,35 @@ import {
   Contact,
   Footer,
   Background,
-  PreLoadScreen,
 } from './components';
 import { ViewportProvider } from './hooks/useViewport';
+import usePreLoadScreen from './hooks/usePreLoadScreen'
 
 function App() {
-  const duration: number = 4000;
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, duration);
-  }, []);
+
+  // * PreLoadScreen Hook
+  const {loading, PreLoadScreenComponent} = usePreLoadScreen();
 
   return (
-    // loading ? (
-    <PreLoadScreen duration={duration} />
-  // ) : (
-  //   <div className="App">
-  //     <div className="stars">
-  //       <div className="twinkling">
-  //         <Background />
-  //         <Nav />
-  //         <Hero />
-  //         <ViewportProvider>
-  //           <Skills />
-  //         </ViewportProvider>
-  //         <Projects />
-  //         <Contact />
-  //         <Footer />
-  //       </div>
-  //     </div>
-  //   </div>
-  //   )
+    loading ? (
+    <PreLoadScreenComponent duration={4000} />
+  ) : (
+    <div className="App">
+      <div className="stars">
+        <div className="twinkling">
+          <Background />
+          <Nav />
+          <Hero />
+          <ViewportProvider>
+            <Skills />
+          </ViewportProvider>
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
+    </div>
+    )
   );
 }
 
