@@ -6,5 +6,6 @@ import Contact from './Contact'
 import Footer from './Footer'
 import Background from './Background'
 import PreLoadScreen from './PreLoadScreen'
+import SideBar from './SideBar'
 
-export { Nav, Hero, Skills, Projects, Contact, Footer, Background, PreLoadScreen }
+export { Nav, Hero, Skills, Projects, Contact, Footer, Background, PreLoadScreen, SideBar }

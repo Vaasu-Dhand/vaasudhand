@@ -1,4 +1,4 @@
-@import 'navbar';
+// @import 'navbar';
 
 #hero {
   position: relative;
@@ -6,7 +6,7 @@
   z-index: -9;
   background: url('/images/hero3.jpg') no-repeat top center fixed;
   background-size: cover;
-  padding-top: $nav-height;
+  // padding-top: $nav-height;
   &::after {
     content: '';
     background: rgba(0, 0, 0, 0.3);
