@@ -18,6 +18,9 @@ function App() {
   const { loading, PreLoadScreenComponent } = usePreLoadScreen(100);
   // ! Change this to 4000
 
+  console.log(import.meta.env.MODE)
+  
+
   return (
     <AnimatePresence>
       (

@@ -22,7 +22,7 @@ import {
   NODE,
   TYPESCRIPT,
   VSCODE,
-} from '../svg/';
+} from '../svg/skillicons';
 
 export default function Skills() {
   const skills = {

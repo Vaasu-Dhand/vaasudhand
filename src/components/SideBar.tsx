@@ -47,7 +47,7 @@ export default function SideBar() {
           </li>
           {/* Links */}
           {map(links, (Link: React.ElementType, key) => (
-            <li className="nav-item">
+            <li className="nav-item" key={key}>
               <a href="#" className="nav-link">
                 <Link />
                 <span className="link-text">{key}</span>
