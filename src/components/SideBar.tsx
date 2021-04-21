@@ -16,7 +16,7 @@ export default function SideBar() {
 
   const socialMedia = { GITHUB, LINKEDIN, TWITTER };
 
-  const socialLinks: socialLinksTypes = {
+  const socialLinks: { [x: string]: string } = {
     twitter: 'twitter.com/DhandVaasu',
     linkedin: 'linkedin.com/in/vaasu-dhand-520747191/',
     github: 'github.com/Vaasu-Dhand',
@@ -46,7 +46,11 @@ export default function SideBar() {
             <ul className="social-media">
               {map(socialMedia, (Media: React.ElementType, key) => (
                 <li className="nav-link" key={key}>
-                  <a href={`https://${socialLinks[key.toLowerCase()]}`} className="nav-link" target="_blank">
+                  <a
+                    href={`https://${socialLinks[key.toLowerCase()]}`}
+                    className="nav-link"
+                    target="_blank"
+                  >
                     <Media />
                     <span className="link-text">{key}</span>
                   </a>
@@ -58,10 +62,4 @@ export default function SideBar() {
       </nav>
     </div>
   );
-}
-
-interface socialLinksTypes {
-  twitter: string,
-  linkedin: string,
-  github: string
 }
