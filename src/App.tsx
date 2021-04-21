@@ -15,11 +15,8 @@ import { usePreLoadScreen } from './hooks';
 
 function App() {
   // * PreLoadScreen Hook
-  const { loading, PreLoadScreenComponent } = usePreLoadScreen(100);
-  // ! Change this to 4000
-
-  console.log(import.meta.env.MODE)
-  
+  const duration = import.meta.env.MODE === 'development' ? 100 : 4000;
+  const { loading, PreLoadScreenComponent } = usePreLoadScreen(duration);
 
   return (
     <AnimatePresence>
