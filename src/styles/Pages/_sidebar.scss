@@ -44,19 +44,27 @@ $transition-speed: 600ms;
       justify-content: space-between;
 
       li {
-        height: 3.5rem;
+        height: 4rem;
         align-self: center;
         display: flex;
         width: 100%;
+        &:hover a svg path {
+          color: #df49a6;
+        }
         a {
+          width: 100%;
+          height: 100%;
           &:hover {
-            background: initial;
             color: inherit;
+            background-color: initial;
           }
           svg {
             width: 2rem;
             min-width: 2rem;
             margin: 0 1.5rem;
+            path {
+              color: lighten($color: #df49a6, $amount: 30);
+            }
           }
         }
       }
@@ -116,6 +124,7 @@ $transition-speed: 600ms;
     font-size: 1rem;
     left: -999px;
     transition: $transition-speed;
+
   }
 
   .navbar:hover .logo svg {
@@ -159,6 +168,12 @@ $transition-speed: 600ms;
       // * Sidebar Open
       &:hover {
         width: 16rem;
+
+        li.logo a {
+          filter: grayscale(0%) opacity(1);
+          background: $bg-secondary;
+          color: $text-secondary;
+        }
 
         .link-text {
           display: inline;
