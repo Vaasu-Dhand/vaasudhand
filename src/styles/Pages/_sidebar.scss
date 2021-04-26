@@ -6,6 +6,7 @@ $bg-secondary: #141418;
 $transition-speed: 600ms;
 
 #sidebar {
+
   nav.navbar {
     position: fixed;
     background-color: $bg-primary;
@@ -142,9 +143,21 @@ $transition-speed: 600ms;
   .logo {
     display: none;
   }
+  .nav-item:last-child {
+    margin: 0 !important;
+  }
 
   ul.navbar-nav {
     flex-direction: row !important;
+  }
+
+  ul.social-media { 
+    flex-direction: row !important;
+
+    li a, li:hover {
+      
+      height: 5rem !important;
+    }
   }
 
   .nav-link {
