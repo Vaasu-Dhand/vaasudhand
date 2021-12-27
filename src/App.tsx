@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Nav,
   Hero,
@@ -8,14 +8,14 @@ import {
   Footer,
   Background,
   SideBar,
-} from './components';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ViewportProvider } from './hooks/useViewport';
-import { usePreLoadScreen } from './hooks';
+} from "./components";
+import { motion, AnimatePresence } from "framer-motion";
+import { ViewportProvider } from "./hooks/useViewport";
+import { usePreLoadScreen } from "./hooks";
 
 function App() {
   // * PreLoadScreen Hook
-  const duration = import.meta.env.MODE === 'development' ? 100 : 4000;
+  const duration = import.meta.env.MODE === "development" ? 100 : 4000;
   const { loading, PreLoadScreenComponent } = usePreLoadScreen(duration);
 
   return (
@@ -31,24 +31,24 @@ function App() {
           <PreLoadScreenComponent />
         </motion.div>
       ) : (
-        <div className="App">
-          <SideBar />
-          <main>
-            <div className="stars">
-              <div className="twinkling">
-                <Background />
-                {/* <Nav /> */}
-                <Hero />
-                <ViewportProvider>
+        <ViewportProvider>
+          <div className="App">
+            <SideBar />
+            <main>
+              <div className="stars">
+                <div className="twinkling">
+                  <Background />
+                  {/* <Nav /> */}
+                  <Hero />
                   <Skills />
-                </ViewportProvider>
-                <Projects />
-                <Contact />
-                <Footer />
+                  <Projects />
+                  <Contact />
+                  <Footer />
+                </div>
               </div>
-            </div>
-          </main>
-        </div>
+            </main>
+          </div>
+        </ViewportProvider>
       )}
       )
     </AnimatePresence>
