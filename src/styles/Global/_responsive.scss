@@ -116,6 +116,9 @@
   // .container {
   // max-width: 119px;
   // }
+  footer h2 {
+    font-size: 18px;
+  }
 }
 
 // * Changes FlexBox Layout on Smaller Devices
@@ -123,11 +126,9 @@
   // /* CSS */
   .project {
     flex-direction: column;
-
     .media {
       width: 100%;
     }
-
     .project-info {
       width: 100%;
     }

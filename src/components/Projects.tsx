@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, BaseSyntheticEvent } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { projects } from "../../public/json/projects.json";
@@ -19,8 +19,12 @@ export default function Projects() {
   }, [animation, inView]);
 
   const getVideoPath = (key: string): string => {
-    return `public/video/${key}-rec.mov`;
+    return `video/${key}-rec.mov`;
   };
+
+  function handleMouseEnter(e: BaseSyntheticEvent): void {
+    e.target.controls = true    
+  }
 
   const frameVariants = {
     initial: {
@@ -73,13 +77,13 @@ export default function Projects() {
           }: Project) => (
             <motion.div variants={itemVariants} className="project" key={name}>
               <div className="media">
-                {/* <img src="./Images/image.gif" alt={name + " - Project"} /> */}
                 <video
                   src={getVideoPath(key)}
-                  width="600"
-                  height="300"
-                  controls
+                  onMouseEnter={handleMouseEnter}
+                  controls={false}
+                  loop
                   autoPlay
+                  muted
                 />
               </div>
               <div className="project-info">
