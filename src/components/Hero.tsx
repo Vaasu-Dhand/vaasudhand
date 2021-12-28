@@ -28,8 +28,8 @@ export default function Hero() {
       onScroll={() => setOpacity(1 - window.scrollY / 800)}
     >
       <div className="hero-content">
-        <h1>Vaasu Dhand</h1>
-        <h2>I Build Things Out of This World.</h2>
+        <h1 className="glitch" data-text="Vaasu Dhand">Vaasu Dhand</h1>
+        <h2 className="glitch" data-text="I Build Things Out of This World.">I Build Things Out of This World.</h2>
       </div>
       <div className="hero-image">
         <img src={`/images/memoji-${getHeroImage}.png`} alt="Memoji" />

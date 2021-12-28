@@ -1,3 +1,7 @@
+/*
+ * Deprecated (27/12/21)
+ */
+
 import React from 'react'
 export default function Nav() {
   return (

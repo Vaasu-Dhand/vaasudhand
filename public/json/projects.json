@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "name": "Investing.com",
+      "tags": [
+        "HANDLEBARS",
+        "BOOTSTRAP",
+        "JAVASCRIPT",
+        "NODE",
+        "EXPRESS",
+        "MONGODB",
+        "NPM"
+      ],
+      "links": {
+        "live": "https://investing-project-vd.herokuapp.com/",
+        "github": "https://github.com/Vaasu-Dhand/investing-project"
+      },
+      "description": "A global company database that utilizes a bunch of technologies like Node.js, Express.js, Handlebars. The user has the ability to view, modify, create, and delete (CRUD)companies listed in the database. Implemented features like - Pagination, 404 Page, Routing, etc"
+    },
+    {
+      "name": "COVID-19 Tracker",
+      "tags": [
+        "HTML",
+        "MATERIAL UI",
+        "CHARTS.JS",
+        "REST API",
+        "REACT",
+        "REACT HOOKS"
+      ],
+      "links": {
+        "live": "https://covid-19-tracker-app-vd.herokuapp.com/",
+        "github": "https://github.com/Vaasu-Dhand/covid-19-tracker-app"
+      },
+      "description": "Corona Virus is, unfortunately, spreading through the entire world. What can we, as developers, do to make the situation better? We can help to spread awareness by visualizing the data. The data is fetched from the API and cards displaying the statistics as well as Charts. This project/application is created using modern JavaScript syntax. I also use - Material UI, Charts.js, React Hooks, API data fetching, all of it in React JS!"
+    },
+    {
+      "name": "Pokemon Cards",
+      "tags": ["HTML", "CSS", "REACT"],
+      "links": {
+        "live": "https://pokemon-project-vd.herokuapp.com/",
+        "github": "https://github.com/Vaasu-Dhand/Pokemon-Project"
+      },
+      "description": "A fun website that displays Pokemon Cards from all generations. Used custom CSS for beautiful UI and animations. Implemented concepts like - Infinite Scroll, PreLoad Screen, Card Flip, etc"
+    }
+  ]
+}
