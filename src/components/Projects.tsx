@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import { isArrayLike } from "lodash";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {projects} from "../../public/json/projects.json";
+import { projects } from "../../public/json/projects.json";
 
 export default function Projects() {
-
   const animation = useAnimation();
-  const [ref, inView, entry] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
 
   // * Starts Animation in the right ViewPort
   useEffect(() => {
@@ -19,6 +17,10 @@ export default function Projects() {
 
     inView && animation.start("animate");
   }, [animation, inView]);
+
+  const getVideoPath = (key: string): string => {
+    return `public/video/${key}-rec.mov`;
+  };
 
   const frameVariants = {
     initial: {
@@ -62,10 +64,23 @@ export default function Projects() {
 
       {projects &&
         projects.map(
-          ({ name, tags, links: { live, github }, description }: Project) => (
+          ({
+            name,
+            key,
+            tags,
+            links: { live, github },
+            description,
+          }: Project) => (
             <motion.div variants={itemVariants} className="project" key={name}>
               <div className="media">
-                <img src="./Images/image.gif" alt={name + " - Project"} />
+                {/* <img src="./Images/image.gif" alt={name + " - Project"} /> */}
+                <video
+                  src={getVideoPath(key)}
+                  width="600"
+                  height="300"
+                  controls
+                  autoPlay
+                />
               </div>
               <div className="project-info">
                 <h1 className="">{name}</h1>
@@ -97,6 +112,7 @@ export default function Projects() {
 
 interface Project {
   name: string;
+  key: string;
   tags: string[];
   links: {
     live: string;

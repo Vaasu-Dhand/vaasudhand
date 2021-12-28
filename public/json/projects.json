@@ -2,6 +2,7 @@
   "projects": [
     {
       "name": "Investing.com",
+      "key": "investing-project",
       "tags": [
         "HANDLEBARS",
         "BOOTSTRAP",
@@ -19,6 +20,7 @@
     },
     {
       "name": "COVID-19 Tracker",
+      "key": "covid19-project",
       "tags": [
         "HTML",
         "MATERIAL UI",
@@ -35,6 +37,7 @@
     },
     {
       "name": "Pokemon Cards",
+      "key": "pokemon-project",
       "tags": ["HTML", "CSS", "REACT"],
       "links": {
         "live": "https://pokemon-project-vd.herokuapp.com/",
