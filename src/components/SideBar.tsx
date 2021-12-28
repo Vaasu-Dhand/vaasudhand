@@ -35,7 +35,7 @@ export default function SideBar() {
           {/* Links */}
           {map(links, (Link: React.ElementType, key) => (
             <li className="nav-item" key={key}>
-              <a href="#" className="nav-link">
+              <a href={`#${key.toLowerCase()}`} className="nav-link">
                 <Link />
                 <span className="link-text">{key}</span>
               </a>

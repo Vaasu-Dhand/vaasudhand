@@ -4,6 +4,7 @@ dist
 dist-ssr
 *.local
 notes.md
+TODO.md
 .env
 # Local Netlify folder
 .netlify

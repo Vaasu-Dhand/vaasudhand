@@ -1,6 +1,5 @@
 - Add a smooth scroll thing
 - Repeat animations on projects & Contact Form
-- Improve the spacing and section title css
 
 - Responsive hero text & Image
 - Resposive Nav
