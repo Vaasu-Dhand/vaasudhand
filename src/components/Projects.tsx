@@ -64,7 +64,7 @@ export default function Projects() {
       animate={animation}
       initial="hidden"
     >
-      <h1>Projects</h1>
+      <h1 className="section-title">Projects</h1>
 
       {projects &&
         projects.map(

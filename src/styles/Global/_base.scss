@@ -53,23 +53,8 @@ body {
       background-color: $SLIDER_COLOR_HOVER;
     }
   }
-
-  // body::-webkit-scrollbar {
-  //   width: 0.25rem;
-  // }
-
-  body {
-    // &::-webkit-scrollbar-track {
-    //   background: #1e1e24;
-    // }
-
-    // &::-webkit-scrollbar-thumb {
-    //   background: #6f42c1;
-    // }
-  }
 }
-
 main {
   margin-left: 5rem;
-  // padding: 1rem;
 }
+

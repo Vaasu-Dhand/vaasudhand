@@ -1,8 +1,4 @@
 #skills {
-  // h1 {
-    // # "My Toolkit" -> Add Text Animation
-  // }
-
   ul.wrapper-skills {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -34,7 +30,7 @@
       h3 {
         margin-top: 5px;
         font-weight: 100;
-        text-shadow: 2px 3px 7px rgba(255, 255, 255, 0.9);
+        text-shadow: 2px 3px 7px rgba(255, 255, 255, 0.4);
       }
     }
     // ? Remove the second hover selector if you want to keep the skills colored

@@ -117,7 +117,7 @@ export default function Skills() {
   
   return (
     <section id="skills" className="container">
-      <h1>My Toolkit</h1>
+      <h1 className="section-title">My Toolkit</h1>
       <motion.ul
         className="wrapper-skills"
         variants={containerVariant}

@@ -9,6 +9,11 @@
   opacity: 0.5;
 }
 
+.section-title {
+  margin: 60px 0 40px 0;
+  font-size: 2rem
+}
+
 // * BUTTON TYPES
 .button-purple {
   @include button-styles;
