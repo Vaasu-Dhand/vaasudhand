@@ -5,17 +5,15 @@ import { projects } from "../../public/json/projects.json";
 
 export default function Projects() {
   const animation = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: false });
 
   // * Starts Animation in the right ViewPort
   useEffect(() => {
     if (inView) {
       animation.start("animate");
-    } else {
+    } else if (!inView && document.scrollingElement && document.scrollingElement.scrollTop < 2000) {
       animation.start("initial");
     }
-
-    inView && animation.start("animate");
   }, [animation, inView]);
 
   const getVideoPath = (key: string): string => {
@@ -56,6 +54,8 @@ export default function Projects() {
   };
 
   return (
+    <>
+    <h1 className="section-title" style={{marginLeft: 68.50}}>Projects</h1>
     <motion.section
       id="projects"
       className="container"
@@ -64,8 +64,6 @@ export default function Projects() {
       animate={animation}
       initial="hidden"
     >
-      <h1 className="section-title">Projects</h1>
-
       {projects &&
         projects.map(
           ({
@@ -111,6 +109,7 @@ export default function Projects() {
           )
         )}
     </motion.section>
+    </>
   );
 }
 
