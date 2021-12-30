@@ -32,7 +32,7 @@ export default function Projects() {
       opacity: 1,
       transition: {
         duration: 2,
-        staggerChildren: 0.5,
+        staggerChildren: 1,
         ease: [0.02, 0.6, -0.01, 0.91],
       },
     },
