@@ -1,8 +1,9 @@
-- Add a smooth scroll thing
 - Repeat animations on projects & Contact Form
-
-- Responsive hero text & Image
 - Resposive Nav
+
+- deploy to Netlfiy
+- ready a linkedin post
 
 - Add Chillhop Music scrapper
 - Add a section for about me like jenny trinh
+- Find a way to disable css from extenstions.

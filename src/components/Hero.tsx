@@ -23,7 +23,7 @@ export default function Hero() {
 
   return (
     <section
-      id="hero"
+      id="home"
       style={{ opacity: opacity }}
       onScroll={() => setOpacity(1 - window.scrollY / 800)}
     >
