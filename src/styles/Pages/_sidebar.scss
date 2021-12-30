@@ -125,7 +125,6 @@ $transition-speed: 600ms;
     font-size: 1rem;
     left: -999px;
     transition: $transition-speed;
-
   }
 
   .navbar:hover .logo svg {
@@ -145,17 +144,20 @@ $transition-speed: 600ms;
   }
   .nav-item:last-child {
     margin: 0 !important;
+    flex-shrink: 0.7;
   }
 
   ul.navbar-nav {
     flex-direction: row !important;
+    svg {
+      margin: 0 !important;
+    }
   }
 
   ul.social-media { 
     flex-direction: row !important;
 
     li a, li:hover {
-      
       height: 5rem !important;
     }
   }
@@ -163,6 +165,8 @@ $transition-speed: 600ms;
   .nav-link {
     justify-content: center;
   }
+
+  
 
   main {
     margin: 0;
