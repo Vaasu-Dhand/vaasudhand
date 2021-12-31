@@ -1,16 +1,13 @@
-// * 1 - Helpers
+// * - Helpers
 @import 'Helpers/variables';
 @import 'Helpers/mixins';
 @import 'Helpers/classes';
 
-// * 2 - Libraries
-@import 'Libraries/hamburgers';
-
-// * 3 - Global 
+// * - Global 
 @import 'Global/stars';
 @import 'Global/base';
 
-// * 4 - Pages
+// * - Pages
 @import 'Pages/blog';
 @import 'Pages/hero';
 // @import 'Pages/navbar';

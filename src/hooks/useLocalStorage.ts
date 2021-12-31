@@ -1,6 +1,8 @@
-import { useState } from 'react'
+/*
+ * Not being used (30/12/21)
+ */
 
-// ! Not being used
+import { useState } from 'react'
 
 export default function useLocalStorage(key: string, initialValue: any) {
   // State to store our value
