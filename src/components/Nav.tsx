@@ -20,7 +20,7 @@ export default function Nav() {
         </a>
         <ul>
           <li><a data-scroll href="#about">About</a></li>
-          <li><a data-scroll href="#skills">Skills</a></li>
+          <li><a data-scroll href="#toolkit">Toolkit</a></li>
           <li><a data-scroll href="#projects">Projects</a></li>
           <li><a data-scroll href="#blog">Blog</a></li>
           <li><a data-scroll href="#contact">Contact</a></li>

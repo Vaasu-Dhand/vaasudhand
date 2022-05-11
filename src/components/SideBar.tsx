@@ -7,13 +7,13 @@ import {
   LINKEDIN,
   TWITTER,
   USER_ASTRONAUT as HOME,
-  TOOLS as SKILLS,
+  TOOLS as TOOLKIT,
   ALIEN_MONSTER as PROJECTS,
   SPACE_SHUTTLE as CONTACT,
 } from "../svg/navicons";
 
 export default function SideBar() {
-  const links = { HOME, SKILLS, PROJECTS, CONTACT };
+  const links = { HOME, TOOLKIT, PROJECTS, CONTACT };
 
   const socialMedia = { GITHUB, LINKEDIN, TWITTER };
 

@@ -2,7 +2,7 @@ import React from "react";
 import {
   Nav,
   Hero,
-  Skills,
+  Toolkit,
   Projects,
   Contact,
   Footer,
@@ -40,7 +40,7 @@ function App() {
                   <Background />
                   {/* <Nav /> */}
                   <Hero />
-                  <Skills />
+                  <Toolkit />
                   <Projects />
                   <Contact />
                   <Footer />

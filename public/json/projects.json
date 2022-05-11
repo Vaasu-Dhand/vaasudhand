@@ -36,14 +36,13 @@
       "description": "Corona Virus is, unfortunately, spreading through the entire world. What can we, as developers, do to make the situation better? We can help to spread awareness by visualizing the data. The data is fetched from the API and cards displaying the statistics as well as Charts. This project/application is created using modern JavaScript syntax. I also use - Material UI, Charts.js, React Hooks, API data fetching, all of it in React JS!"
     },
     {
-      "name": "Pokemon Cards",
-      "key": "pokemon-project",
-      "tags": ["HTML", "CSS", "REACT"],
+      "name": "Chillhop Music Scrapper",
+      "key": "chillhop-music-scrapper",
+      "tags": ["Node", "Puppeteer", "Web Scraping"],
       "links": {
-        "live": "https://pokemon-project-vd.herokuapp.com/",
-        "github": "https://github.com/Vaasu-Dhand/Pokemon-Project"
+        "github": "https://github.com/Vaasu-Dhand/chillhop-music-scrapper"
       },
-      "description": "A fun website that displays Pokemon Cards from all generations. Used custom CSS for beautiful UI and animations. Implemented concepts like - Infinite Scroll, PreLoad Screen, Card Flip, etc"
+      "description": "A chillhop.com music scrapper build using Node.js. This tool scrapes music tracks off of <a href='https://chillhop.com/' style='color: #6f42c1; font-weight: bold'>chillhop.com</a> and stores it in a local json file."
     }
   ]
 }
