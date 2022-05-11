@@ -94,12 +94,14 @@ export default function Projects() {
                   ))}
                 </h5>
                 <div>
-                  <p>{description}</p>
+                  <p dangerouslySetInnerHTML={{__html: description}}></p>
                 </div>
                 <div className="link-container">
+                  {live && (
                   <a href={live} target="_blank" className="button-white">
                     LIVE
                   </a>
+                  )}
                   <a href={github} target="_blank" className="button-white">
                     GITHUB
                   </a>
@@ -118,7 +120,7 @@ interface Project {
   key: string;
   tags: string[];
   links: {
-    live: string;
+    live?: string;
     github: string;
   };
   description: string;
