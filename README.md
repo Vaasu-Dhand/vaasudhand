@@ -1,12 +1,12 @@
 # Tech Stack
 ## Front End
-- React-TSX (Typescript-React) 
-- ViteJS (Bundling)
-- SCSS (Styling)
+- React-TSX
+- ViteJS
+- SCSS
 ## Animations
-- Framer Motion (Animating)
+- Framer Motion
 ## Forms
-- Netlify Forms (Form Submissions)
-- Zapier (Contact Form Emails)
+- Netlify Forms
+- Zapier
 ## Deployment
 - [Netlify](https://vaasudhand.netlify.app/)

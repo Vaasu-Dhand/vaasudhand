@@ -24,7 +24,7 @@ import {
   VSCODE,
 } from '../svg/skillicons';
 
-export default function Skills() {
+export default function Toolkit() {
   const skills = {
     // ReArrange Skills
     HTML5,
@@ -116,7 +116,7 @@ export default function Skills() {
   };
   
   return (
-    <section id="skills" className="container">
+    <section id="toolkit" className="container">
       <h1 className="section-title">My Toolkit</h1>
       <motion.ul
         className="wrapper-skills"
