@@ -1,0 +1,10 @@
+{
+  "startYear": 2019,
+  "para1": "I'm a web developer focused on building web applications at scale. I'm driven by creating innovative, performant solutions — the kind that make the experience genuinely better for the people using them.",
+  "para2": "I work best alongside others — I enjoy collaborating with cross-functional teams to ship high-quality results. And I'm always looking to learn, grow, and bring my expertise to projects that matter.",
+  "stats": [
+    { "label": "Based in", "value": "Vancouver, BC" },
+    { "label": "Focus", "value": "Frontend · Cloud · Systems" },
+    { "label": "Currently", "value": "Software Developer @ Later" }
+  ]
+}

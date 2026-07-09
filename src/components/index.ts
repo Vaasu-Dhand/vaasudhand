@@ -1,11 +1,12 @@
 import Nav from './Nav'
 import Hero from './Hero'
-import Toolkit from './Toolkit'
+import Marquee from './Marquee'
+import About from './About'
+import Experience from './Experience'
 import Projects from './Projects'
+import Certifications from './Certifications'
 import Contact from './Contact'
 import Footer from './Footer'
-import Background from './Background'
-import PreLoadScreen from './PreLoadScreen'
-import SideBar from './SideBar'
+import Blog from './Blog'
 
-export { Nav, Hero, Toolkit, Projects, Contact, Footer, Background, PreLoadScreen, SideBar }
+export { Nav, Hero, Marquee, About, Experience, Projects, Certifications, Contact, Footer, Blog }

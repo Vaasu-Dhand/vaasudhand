@@ -1,0 +1,73 @@
+[
+  {
+    "company": "Later",
+    "idx": "01",
+    "location": "Vancouver, BC",
+    "duration": "10 mos",
+    "logo": "/images/later_official_logo.jpeg",
+    "bg": "#141414",
+    "ink": "#F4EFE6",
+    "mut": "rgba(244,239,230,0.62)",
+    "roles": [
+      {
+        "title": "Software Developer",
+        "dates": "Sep 2024 — Jun 2025",
+        "dur": "10 mos",
+        "summary": "Developed Later's social platform with React, Ember.js and Ruby on Rails, collaborating across Engineering, QA, PM and Design in an agile team.",
+        "skills": ["Ember.js", "React", "Ruby on Rails", "Datadog", "TypeScript", "GraphQL"]
+      }
+    ]
+  },
+  {
+    "company": "ALS GoldSpot Discoveries",
+    "idx": "02",
+    "location": "Vancouver, BC",
+    "duration": "1 yr 3 mos",
+    "logo": "/images/goldspot_discoveries_inc_logo.jpeg",
+    "bg": "#0B4DA2",
+    "ink": "#FFFFFF",
+    "mut": "rgba(255,255,255,0.7)",
+    "roles": [
+      {
+        "title": "Software Developer",
+        "dates": "Jun 2023 — Aug 2024",
+        "dur": "1 yr 3 mos",
+        "summary": "Built geology apps with React, TypeScript and Python, heavily leveraging AWS — Lambda, Amplify, S3, CloudWatch and DynamoDB — provisioned with Terraform.",
+        "skills": ["Terraform", "AWS", "DynamoDB", "React", "TypeScript", "Python", "Lambda"]
+      }
+    ]
+  },
+  {
+    "company": "Xactly Corp",
+    "idx": "03",
+    "location": "Toronto, Ontario",
+    "duration": "1 yr 10 mos",
+    "logo": "/images/xactly_corporation_logo.jpeg",
+    "bg": "#12203A",
+    "ink": "#FFFFFF",
+    "mut": "rgba(255,255,255,0.7)",
+    "roles": [
+      {
+        "title": "Software Engineer",
+        "dates": "Dec 2022 — Feb 2023",
+        "dur": "3 mos",
+        "summary": "Built a custom form builder in React, TypeScript and Redux, and authored an ORM (JSON-SQL) that eased API interaction via a façade pattern.",
+        "skills": ["TypeScript", "Redux", "AWS", "React", "Node.js"]
+      },
+      {
+        "title": "Associate Software Engineer",
+        "dates": "Aug 2021 — Dec 2022",
+        "dur": "1 yr 5 mos",
+        "summary": "Built enterprise, cloud-based sales performance software and migrated a multi-page experience into a SPA, improving engagement by 20%.",
+        "skills": ["TypeScript", "React", "Git", "Jenkins"]
+      },
+      {
+        "title": "UI Engineer Intern",
+        "dates": "May 2021 — Aug 2021",
+        "dur": "4 mos",
+        "summary": "Practised disciplined scrum within Xactly's SDLC and handled web operations across front-end and back-end integration.",
+        "skills": ["JavaScript", "HTML", "CSS", "Git"]
+      }
+    ]
+  }
+]

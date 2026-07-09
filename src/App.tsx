@@ -1,58 +1,59 @@
-import React from "react";
-import {
-  Nav,
-  Hero,
-  Toolkit,
-  Projects,
-  Contact,
-  Footer,
-  Background,
-  SideBar,
-} from "./components";
-import { motion, AnimatePresence } from "framer-motion";
-import { ViewportProvider } from "./hooks/useViewport";
-import { usePreLoadScreen } from "./hooks";
+import React, { useEffect, useState } from 'react'
+import { Nav, Hero, Marquee, About, Experience, Projects, Certifications, Contact, Footer, Blog } from './components'
+import { useScrollReveal } from './hooks'
 
-function App() {
-  // * PreLoadScreen Hook
-  const duration = import.meta.env.MODE === "development" ? 100 : 4000;
-  const { loading, PreLoadScreenComponent } = usePreLoadScreen(duration);
+type Theme = 'light' | 'dark'
 
+function HomeView() {
   return (
-    <AnimatePresence>
-      (
-      {loading ? (
-        <motion.div
-          key="preload-screen"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <PreLoadScreenComponent />
-        </motion.div>
-      ) : (
-        <ViewportProvider>
-          <div className="App">
-            <SideBar />
-            <main>
-              <div className="stars">
-                <div className="twinkling">
-                  <Background />
-                  {/* <Nav /> */}
-                  <Hero />
-                  <Toolkit />
-                  <Projects />
-                  <Contact />
-                  <Footer />
-                </div>
-              </div>
-            </main>
-          </div>
-        </ViewportProvider>
-      )}
-      )
-    </AnimatePresence>
-  );
+    <>
+      <Hero />
+      <Marquee />
+      <About />
+      <Experience />
+      <Projects />
+      <Certifications />
+      <Contact />
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+function App() {
+  const [theme, setTheme] = useState<Theme>(() => {
+    try { return (localStorage.getItem('vd-theme') as Theme) || 'light' } catch { return 'light' }
+  })
+  const [view, setView] = useState<'home' | 'blog'>('home')
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useScrollReveal()
+
+  useEffect(() => {
+    const apply = () => {
+      setView(location.hash.includes('/blog') ? 'blog' : 'home')
+      setMenuOpen(false)
+    }
+    window.addEventListener('hashchange', apply)
+    apply()
+    return () => window.removeEventListener('hashchange', apply)
+  }, [])
+
+  const toggleTheme = () => {
+    setTheme(prev => {
+      const next: Theme = prev === 'light' ? 'dark' : 'light'
+      try { localStorage.setItem('vd-theme', next) } catch {}
+      return next
+    })
+  }
+
+  const toggleMenu = () => setMenuOpen(prev => !prev)
+
+  return (
+    <div id="vd-site" data-theme={theme} {...(menuOpen ? { 'data-menu': 'open' } : {})}>
+      <Nav toggleTheme={toggleTheme} toggleMenu={toggleMenu} closeMenu={() => setMenuOpen(false)} />
+      {view === 'home' ? <HomeView /> : <Blog />}
+    </div>
+  )
+}
+
+export default App

@@ -1,0 +1,9 @@
+[
+  { "issuer": "Datadog",      "title": "APM Metrics & Traces",         "year": "2026", "tint": "#632CA6", "file": "/certificates/datadog-apm-metrics-traces.pdf",           "preview": "/certificates/datadog-apm-metrics-traces-preview.png" },
+  { "issuer": "Datadog",      "title": "Log Explorer",                  "year": "2026", "tint": "#632CA6", "file": "/certificates/datadog-log-explorer.pdf",                 "preview": "/certificates/datadog-log-explorer-preview.png" },
+  { "issuer": "Datadog",      "title": "Quick Start",                   "year": "2026", "tint": "#632CA6", "file": "/certificates/datadog-quick-start.pdf",                  "preview": "/certificates/datadog-quick-start-preview.png" },
+  { "issuer": "HashiCorp",    "title": "Terraform Associate",           "year": "2026", "tint": "#7B42BC", "file": "/certificates/hashicorp-terraform-associate.pdf",         "preview": "/certificates/hashicorp-terraform-associate-preview.png" },
+  { "issuer": "Coursera",     "title": "Level Up Python",               "year": "2023", "tint": "#0056D2", "file": "/certificates/coursera-level-up-python.pdf",              "preview": "/certificates/coursera-level-up-python-preview.png" },
+  { "issuer": "freeCodeCamp", "title": "JavaScript Algorithms",         "year": "2022", "tint": "#0A0A23", "file": "/certificates/freecodecamp-javascript-algorithms.pdf",    "preview": "/certificates/freecodecamp-javascript-algorithms-preview.png" },
+  { "issuer": "Udemy",        "title": "Webpack 4",                     "year": "2021", "tint": "#A435F0", "file": "/certificates/udemy-webpack.png",                         "preview": "/certificates/udemy-webpack.png" }
+]

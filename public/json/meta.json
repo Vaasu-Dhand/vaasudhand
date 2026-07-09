@@ -1,0 +1,37 @@
+{
+  "name": "Vaasu Dhand",
+  "email": "hello@vaasudhand.com",
+  "linkedin": "https://www.linkedin.com/in/vaasu-dhand/",
+  "github": "https://github.com/Vaasu-Dhand",
+  "location": "Vancouver, BC",
+  "role": "Software Engineer",
+  "skills": [
+    "React",
+    "TypeScript",
+    "Ruby on Rails",
+    "Ember.js",
+    "AWS",
+    "Terraform",
+    "MongoDB",
+    "Redux",
+    "DynamoDB",
+    "Node.js",
+    "Datadog",
+    "Go"
+  ],
+  "footerMarquee": [
+    "poetry",
+    "badminton",
+    "ghazals",
+    "nightsky",
+    "flowers"
+  ],
+  "posts": [
+    {
+      "date": "Jun 2026",
+      "title": "Coming soon",
+      "excerpt": "Blog posts coming soon — check back later.",
+      "tag": "Engineering"
+    }
+  ]
+}
