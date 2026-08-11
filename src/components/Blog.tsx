@@ -16,14 +16,21 @@ export default function Blog() {
       </header>
 
       <div style={{ maxWidth: 1080, margin: '0 auto', padding: '0 6vw 14vh' }}>
-        <iframe
-          src="https://irradiated-joggers-3b0.notion.site/ebd//2a929e596a4080babd04fb0a67ba341a?v=2a929e596a4080e9bb4a000cd0faefe0"
-          width="100%"
-          height="800"
-          frameBorder={0}
-          allowFullScreen
-          style={{ borderRadius: 12, border: '1px solid var(--line)', display: 'block' }}
-        />
+        <div
+          className="notion-embed-wrapper"
+          style={{
+            borderRadius: 12,
+            border: '1px solid var(--line)',
+            overflow: 'hidden',
+          }}
+        >
+          <iframe
+            src="https://irradiated-joggers-3b0.notion.site/ebd//2a929e596a4080babd04fb0a67ba341a?v=2a929e596a4080e9bb4a000cd0faefe0"
+            frameBorder={0}
+            allowFullScreen
+            style={{ width: '100%', height: '100%', display: 'block', border: 'none' }}
+          />
+        </div>
         <div style={{ paddingTop: 30, marginTop: 6 }}>
           <a href="#/" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: 'var(--muted)' }}>← Back home</a>
         </div>
