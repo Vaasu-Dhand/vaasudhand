@@ -212,3 +212,37 @@ a {
     gap: 44px !important;
   }
 }
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding-right: 34px;
+  flex-shrink: 0;
+}
+
+.marquee__star {
+  color: var(--accent);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

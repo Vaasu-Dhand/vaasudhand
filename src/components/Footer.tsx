@@ -11,7 +11,7 @@ export default function Footer() {
   const [meta, setMeta] = useState<Meta | null>(null)
 
   useEffect(() => {
-    fetch('/json/meta.json').then(r => r.json()).then(setMeta).catch(() => {})
+    fetch('/json/meta.json').then(r => r.json()).then(setMeta).catch(() => { })
   }, [])
 
   const email = meta?.email || 'hello@vaasudhand.com'
@@ -23,20 +23,31 @@ export default function Footer() {
   return (
     <footer style={{ background: 'var(--ink)', color: 'var(--bg)', transition: 'background 0.5s' }}>
       {doubled.length > 0 && (
-        <div style={{ overflow: 'hidden', borderBottom: '1px solid color-mix(in srgb, var(--bg) 20%, transparent)', padding: '14px 0' }}>
-          <div style={{
-            display: 'flex', gap: 34, width: 'max-content',
-            animation: 'marquee 26s linear infinite',
-            fontFamily: "'JetBrains Mono', monospace", fontSize: 13,
-            letterSpacing: '0.1em', textTransform: 'uppercase',
-            whiteSpace: 'nowrap', opacity: 0.8,
-          }}>
-            {doubled.map((m, i) => (
-              <React.Fragment key={i}>
-                <span>{m}</span>
-                <span style={{ color: 'var(--accent)' }}>✦</span>
-              </React.Fragment>
-            ))}
+        <div
+          style={{
+            overflow: 'hidden',
+            borderBottom: '1px solid color-mix(in srgb, var(--bg) 20%, transparent)',
+            padding: '14px 0',
+          }}
+        >
+          <div className="marquee">
+            <div className="marquee__group">
+              {doubled.map((m, i) => (
+                <React.Fragment key={`a-${i}`}>
+                  <span>{m}</span>
+                  <span className="marquee__star">✦</span>
+                </React.Fragment>
+              ))}
+            </div>
+
+            <div className="marquee__group" aria-hidden="true">
+              {doubled.map((m, i) => (
+                <React.Fragment key={`b-${i}`}>
+                  <span>{m}</span>
+                  <span className="marquee__star">✦</span>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       )}
